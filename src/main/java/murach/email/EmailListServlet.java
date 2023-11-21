@@ -43,7 +43,6 @@ public class EmailListServlet extends HttpServlet
 
         Date currentDate = new Date();
         request.setAttribute("currentDate", currentDate);
-
         String path = getServletContext().getRealPath("/WEB-INF/EmailList.txt");
         ArrayList<User> users = UserIO.getUsers(path);
         session.setAttribute("users", users);
